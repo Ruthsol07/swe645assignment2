@@ -21,7 +21,7 @@ agent any
                }
             }
         }
-    stage('Pushing latest code to Docker Hub') {
+    stage('Pushing code to docker') {
             steps {
                 script {
                     docker.withRegistry('',registryCredential) {
@@ -33,7 +33,7 @@ agent any
                 }
             }
         }
-     stage('Deploying to single node in Rancher and load Balancer') {
+     stage('Deploying node port in Rancher') {
          steps {
             script{
                sh 'kubectl set image deployment/deploy container-0=sawrub/studentsurform:'+dateTag
