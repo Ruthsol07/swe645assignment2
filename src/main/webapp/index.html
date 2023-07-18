@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Survey Form</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      border: 1px solid #ccc;
+    }
+    
+    .form-group label span {
+      color: red;
+    }
+    
+    .form-group ul {
+      margin: 0;
+      padding: 0;
+    }
+    
+    .form-group ul li {
+      list-style: none;
+    }
+    
+    .navigation {
+      background-color: #f1f1f1;
+      padding: 10px;
+    }
+    
+    .navigation a {
+      text-decoration: none;
+      color: #333;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navigation">
+    <a href="home.html">Home</a>
+  </div>
+  <div class="container">
+    <h1 class="header" style="background-color: yellow;">Student Survey Form</h1>
+    <form>
+      <div class="form-group">
+        <label for="firstName">First Name<span>*</span>:</label>
+        <input type="text" id="firstName" name="firstName" required autofocus>
+      </div>
+
+      <div class="form-group">
+        <label for="lastName">Last Name<span>*</span>:</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Street Address<span>*</span>:</label>
+        <input type="text" id="address" name="address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="city">City<span>*</span>:</label>
+        <input type="text" id="city" name="city" required>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State<span>*</span>:</label>
+        <input type="text" id="state" name="state" required>
+      </div>
+
+      <div class="form-group">
+        <label for="zip">Zip<span>*</span>:</label>
+        <input type="text" id="zip" name="zip" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telephone">Telephone Number<span>*</span>:</label>
+        <input type="tel" id="telephone" name="telephone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email<span>*</span>:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="date">Date of Survey<span>*</span>:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+
+      <div class="form-group">
+        <label>What did you like most about the campus<span>*</span>:</label><br>
+        <ul>
+          <li><input type="checkbox" id="students" name="like" value="students">
+            <label for="students">Students</label></li>
+          <li><input type="checkbox" id="location" name="like" value="location">
+            <label for="location">Location</label></li>
+          <li><input type="checkbox" id="campus" name="like" value="campus">
+            <label for="campus">Campus</label></li>
+          <li><input type="checkbox" id="atmosphere" name="like" value="atmosphere">
+            <label for="atmosphere">Atmosphere</label></li>
+          <li><input type="checkbox" id="dormRooms" name="like" value="dormRooms">
+            <label for="dormRooms">Dorm Rooms</label></li>
+          <li><input type="checkbox" id="sports" name="like" value="sports">
+            <label for="sports">Sports</label></li>
+        </ul>
+      </div>
+
+      <div class="form-group">
+        <label>How did you become interested in the university<span>*</span>:</label><br>
+        <ul>
+          <li><input type="radio" id="friends" name="interest" value="friends">
+            <label for="friends">Friends</label></li>
+          <li><input type="radio" id="television" name="interest" value="television">
+            <label for="television">Television</label></li>
+          <li><input type="radio" id="internet" name="interest" value="internet">
+            <label for="internet">Internet</label></li>
+          <li><input type="radio" id="other" name="interest" value="other">
+            <label for="other">Other</label></li>
+        </ul>
+      </div>
+
+      <div class="form-group">
+        <label for="recommendation">Likelihood of recommending this school<span>*</span>:</label>
+        <select id="recommendation" name="recommendation" required>
+          <option value="veryLikely">Very Likely</option>
+          <option value="likely">Likely</option>
+          <option value="unlikely">Unlikely</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="raffle">Raffle<span>*</span>:</label>
+        <input type="text" id="raffle" name="raffle" required>
+        <small>Enter at least ten comma-separated numbers ranging from 1 through 100.</small>
+      </div>
+
+      <div class="form-group">
+        <label for="comments">Additional Comments:</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Cancel">
+      </div>
+    </form>
+  </div>
+</body>
+</html>
