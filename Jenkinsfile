@@ -13,7 +13,7 @@ agent any
             steps {
                 script {
                     sh 'rm -rf *.war'
-                    sh 'jar -cvf SurveyForm.war -C src/main/webapp .'
+                    sh 'jar -cvf studentsurform.war -C src/main/webapp .'
                     docker.withRegistry('',registryCredential){
                       def img = docker.build('sawrub/studentsurform:'+ dateTag)
                    }
@@ -36,8 +36,8 @@ agent any
      stage('Deploying to single node in Rancher and load Balancer') {
          steps {
             script{
-               sh 'kubectl set image deployment/deploy1 container-0=sawrub/studentsurform:'+dateTag
-               sh 'kubectl set image deployment/deploylb container-0=sawrub/studentsurform:'+dateTag
+               sh 'kubectl set image deployment/deploy container-0=sawrub/studentsurform:'+dateTag
+              
             }
          }
       }
